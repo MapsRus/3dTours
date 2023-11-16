@@ -1,0 +1,20 @@
+[
+    {
+        "Location": "600 Independence Ave SW, Washington, DC 20004, USA",
+        "Description": "1",
+        "lat": 38.88816012846482,
+        "lon": -77.01991081237793
+    },
+    {
+        "Location": "CV9J+QG Mexico City, CDMX, Mexico",
+        "Description": "2",
+        "lat": 19.419482177217162,
+        "lon": -99.11866544813216
+    },
+    {
+        "Location": "FRHV+H8 Puslinch, ON, Canada",
+        "Description": "test",
+        "lat": 43.47899066328376,
+        "lon": -80.15674621533164
+    }
+]

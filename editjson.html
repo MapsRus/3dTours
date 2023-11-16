@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        input, button {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON Data Creator</h1>
+    <form id="jsonDataForm">
+        <label for="key">Key:</label>
+        <input type="text" id="key" required>
+
+        <label for="value">Value:</label>
+        <input type="text" id="value" required>
+
+        <button type="button" onclick="addData()">Add Data</button>
+        <button type="button" onclick="saveData()">Save Data to JSON</button>
+    </form>
+
+    <script>
+        let jsonData = {};
+
+        function addData() {
+            const key = document.getElementById('key').value;
+            const value = document.getElementById('value').value;
+
+            if (key && value) {
+                jsonData[key] = value;
+                alert('Data added successfully!');
+            } else {
+                alert('Please enter both key and value.');
+            }
+        }
+
+        function saveData() {
+            const jsonString = JSON.stringify(jsonData, null, 2);
+
+            // You can modify this part to save the JSON data to a file
+            // For simplicity, we'll just display the JSON string in an alert
+            alert('JSON Data:\n\n' + jsonString);
+        }
+    </script>
+</body>
+</html>
